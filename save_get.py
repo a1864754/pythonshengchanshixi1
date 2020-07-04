@@ -1,5 +1,22 @@
+import json
 import time
+
+import chardet
 import pandas as pd
+import requests
+
+
+def re_data(url):
+    url = url
+    headers = {
+        "user-agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"}
+    req = requests.get(url, headers=headers)
+    req.encoding = chardet.detect(req.content)["encoding"]
+    # print(req.status_code)
+    # print(req.text)
+    # 转换为json格式
+    data_json = json.loads(req.text)
+    return data_json
 
 
 def get_data(data, info_list):
