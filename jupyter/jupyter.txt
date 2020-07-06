@@ -1,0 +1,4 @@
+pip install jupyter_nbextensions_configurator -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install jupyter_contrib_nbextensions -i https://pypi.tuna.tsinghua.edu.cn/simple
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
