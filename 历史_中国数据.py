@@ -18,12 +18,9 @@ china_history_data = data_json["data"]["chinaDayList"]
 china_date = pd.DataFrame(china_history_data)["date"]
 # print(info)
 # 获取每天总计数据
-
-
 # 获取每天总计数据（浓缩）
 china_total_data = pd.DataFrame([i["total"] for i in china_history_data])
 # print(china_total_data.head())
-
 # 获取每天实时数据（浓缩）
 china_today_data = pd.DataFrame([i["today"] for i in china_history_data])
 # print(china_today_data)

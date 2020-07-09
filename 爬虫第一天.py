@@ -8,7 +8,8 @@ import pandas as pd
 # 爬取信息
 url = "https://c.m.163.com/ug/api/wuhan/app/data/list-total?t=318749413808"
 headers = {
-    "user-agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36"}
+    "user-agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/83.0.4103.116 Safari/537.36"}
 req = requests.get(url, headers=headers)
 req.encoding = chardet.detect(req.content)["encoding"]
 # print(req.status_code)

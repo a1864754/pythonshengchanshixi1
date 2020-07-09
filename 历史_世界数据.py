@@ -1,5 +1,3 @@
-import time
-
 import pandas as pd
 import save_get
 
@@ -24,11 +22,11 @@ for i in world_id_name_dict:
         world_data["name"] = world_id_name_dict[i]
         if i == "9577772":
             world_all_data = world_data
-            print(world_id_name_dict[i], "成功", world_all_data.shape)
+            print(world_id_name_dict[i], '\033[0;32m 成功 \033[0m', world_all_data.shape)
         else:
             world_all_data = pd.concat([world_all_data, world_data])
-            print(world_id_name_dict[i], "成功", world_data.shape)
+            print(world_id_name_dict[i], '\033[0;32m 成功 \033[0m', world_data.shape)
         # time.sleep(1)
     except:
-        print(world_id_name_dict[i], "失败", world_data.shape)
+        print(world_id_name_dict[i], '\033[0;31m 成功 \033[0m', world_data.shape)
 save_get.save_data_gbk(world_all_data, "world_all_data")

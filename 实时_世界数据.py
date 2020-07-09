@@ -17,11 +17,14 @@ data_json = json.loads(req.text)
 world_data = data_json["data"]["areaTree"]
 # print(world_data)
 
-name_id = pd.DataFrame(world_data)[["id", "name"]]
+name_id = pd.DataFrame(world_data)[["id", "name", "lastUpdateTime"]]
 world_today_data = pd.DataFrame(i["today"] for i in world_data)
 world_total_data = pd.DataFrame(i["total"]for i in world_data)
 world_today_data.columns = ["today_"+i for i in world_today_data.columns]
 world_total_data.columns = ["total_"+i for i in world_total_data.columns]
 
 world_data = pd.concat([name_id, world_total_data, world_today_data], axis=1)
-save_get.save_data_gbk(world_data, 'word_data')
+print(world_data.head(5))
+save_get.save_data(world_data, 'word_data')
+
+
