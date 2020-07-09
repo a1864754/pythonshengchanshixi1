@@ -2,14 +2,14 @@
 # 城市ID：https://static.ws.126.net/163/f2e/news/virus_province/static/shaanxi.json
 # 西安历史：https://c.m.163.com/ug/api/wuhan/app/data/list-by-area-code?areaCode=
 import pandas as pd
-import save_get
+import get_save
 from xpinyin import Pinyin
 import time
 
 pin = Pinyin()
 # 省份id+name
 url = "https://c.m.163.com/ug/api/wuhan/app/data/list-total?t=1593844081982"
-data_json = save_get.re_data(url)
+data_json = get_save.url_to_data(url)
 data_province = data_json["data"]["areaTree"][2]["children"]
 # print(data_province)
 info = pd.DataFrame(data_province)[["id", "name"]]
@@ -35,7 +35,7 @@ for i in province_dict_en:
     print("开始爬取:", i, province_dict[i], province_dict_en[i])
     url = "https://static.ws.126.net/163/f2e/news/virus_province/static/"+province_dict_en[i]+".json"
     # time.sleep(3)
-    data = save_get.re_data(url)
+    data = get_save.url_to_data(url)
     print(data)
 # data = data["features"][""]
 # print(data)

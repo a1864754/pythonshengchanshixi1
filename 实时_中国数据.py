@@ -1,11 +1,11 @@
 import time
 
 import pandas as pd
-import save_get
+import get_save
 
 # 获取省份id+name
 url = "https://c.m.163.com/ug/api/wuhan/app/data/list-total?t=1593844081982"
-data_json = save_get.re_data(url)
+data_json = get_save.url_to_data(url)
 data_province = data_json["data"]["areaTree"][2]["children"]
 # print(data_province)
 info = pd.DataFrame(data_province)[["id", "name"]]
@@ -22,8 +22,8 @@ for i in province_dict:
     print(i)
     try:
         url = "https://c.m.163.com/ug/api/wuhan/app/data/list-by-area-code?areaCode=" + i
-        data = save_get.re_data(url)
-        province_data = save_get.get_data(data["data"]["list"], ["date"])
+        data = get_save.url_to_data(url)
+        province_data = get_save.get_data(data["data"]["list"], ["date"])
         province_data["name"] = province_dict[i]
 
         if i == "420000":
@@ -36,7 +36,7 @@ for i in province_dict:
     except:
         print()
 
-save_get.save_data_gbk(all_province,"all_province")
+get_save.save_data_gbk(all_province, "all_province")
 
 
 

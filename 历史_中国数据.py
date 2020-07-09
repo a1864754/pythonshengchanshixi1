@@ -2,7 +2,7 @@ import requests
 import chardet
 import json
 import pandas as pd
-import save_get
+import get_save
 
 # 爬取信息
 url = "https://c.m.163.com/ug/api/wuhan/app/data/list-total?t=318749413808"
@@ -31,4 +31,4 @@ china_today_data.columns = ["today_" + i for i in china_today_data.columns]
 # print(china_total_data)
 # 合并
 china_data = pd.concat([china_date, china_total_data, china_today_data], axis=1)
-save_get.save_data(china_data, "china_data")
+get_save.save_data(china_data, "china_data")

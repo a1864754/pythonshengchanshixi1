@@ -1,4 +1,4 @@
-mport time
+import time
 
 import requests
 import chardet
@@ -75,4 +75,5 @@ today_provience = get_data(data_provience, ["id", "name", "lastUpdateTime"])
 #today_provience.head()
 #today_provience.to_csv("today_provience_gbk.csv", index=None, encoding="gbk")
 # 2.
-save_data(today_provience,'today_provience')
+# save_data(today_provience,'today_provience')
+print(data_provience)
