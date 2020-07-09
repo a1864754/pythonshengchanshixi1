@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/themes/chalk.js"></script>
+
+</head>
+<body>
+    <div id="7d977c6e11194c12ab4bfa65cc65b90e" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_7d977c6e11194c12ab4bfa65cc65b90e = echarts.init(
+            document.getElementById('7d977c6e11194c12ab4bfa65cc65b90e'), 'chalk', {renderer: 'canvas'});
+        var option_7d977c6e11194c12ab4bfa65cc65b90e = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "pie",
+            "name": "\u73b0\u5b58\u786e\u8bca",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "\u56fd\u5185",
+                    "value": 511
+                },
+                {
+                    "name": "\u56fd\u5916",
+                    "value": 12111431
+                }
+            ],
+            "radius": [
+                60,
+                90
+            ],
+            "center": [
+                "30%",
+                "25%"
+            ],
+            "label": {
+                "show": true,
+                "position": "center",
+                "margin": 8,
+                "formatter":     function(params) {        if(params.name == '\u56fd\u5916')            return '\n\n\n' + params.name + ' : ' + params.value;        return params.seriesName + '\n' + params.name + ' : ' + params.value;    }    
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "formatter": "{a} <br/>{b}: {c} ({d}%)",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "pie",
+            "name": "\u7d2f\u8ba1\u786e\u8bca",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "\u56fd\u5185",
+                    "value": 85399
+                },
+                {
+                    "name": "\u56fd\u5916",
+                    "value": 12111431
+                }
+            ],
+            "radius": [
+                60,
+                90
+            ],
+            "center": [
+                "30%",
+                "75%"
+            ],
+            "label": {
+                "show": true,
+                "position": "center",
+                "margin": 8,
+                "formatter":     function(params) {        if(params.name == '\u56fd\u5916')            return '\n\n\n' + params.name + ' : ' + params.value;        return params.seriesName + '\n' + params.name + ' : ' + params.value;    }    
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "formatter": "{a} <br/>{b}: {c} ({d}%)",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "pie",
+            "name": "\u7d2f\u8ba1\u6cbb\u6108",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "\u56fd\u5185",
+                    "value": 80240
+                },
+                {
+                    "name": "\u56fd\u5916",
+                    "value": 6999100
+                }
+            ],
+            "radius": [
+                60,
+                90
+            ],
+            "center": [
+                "75%",
+                "25%"
+            ],
+            "label": {
+                "show": true,
+                "position": "center",
+                "margin": 8,
+                "formatter":     function(params) {        if(params.name == '\u56fd\u5916')            return '\n\n\n' + params.name + ' : ' + params.value;        return params.seriesName + '\n' + params.name + ' : ' + params.value;    }    
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "formatter": "{a} <br/>{b}: {c} ({d}%)",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "pie",
+            "name": "\u7d2f\u8ba1\u6b7b\u4ea1",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "\u56fd\u5185",
+                    "value": 4648
+                },
+                {
+                    "name": "\u56fd\u5916",
+                    "value": 547508
+                }
+            ],
+            "radius": [
+                60,
+                90
+            ],
+            "center": [
+                "75%",
+                "75%"
+            ],
+            "label": {
+                "show": true,
+                "position": "center",
+                "margin": 8,
+                "formatter":     function(params) {        if(params.name == '\u56fd\u5916')            return '\n\n\n' + params.name + ' : ' + params.value;        return params.seriesName + '\n' + params.name + ' : ' + params.value;    }    
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "formatter": "{a} <br/>{b}: {c} ({d}%)",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u56fd\u5185",
+                "\u56fd\u5916"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u6d77\u5185\u5916\u75ab\u60c5\u6570\u636e\u5bf9\u6bd4",
+            "subtext": " \u66f4\u65b0\u65f6\u95f4\uff1a2020-07-09 09:04:42",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_7d977c6e11194c12ab4bfa65cc65b90e.setOption(option_7d977c6e11194c12ab4bfa65cc65b90e);
+    </script>
+</body>
+</html>
