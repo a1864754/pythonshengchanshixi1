@@ -1,4 +1,4 @@
-import time
+mport time
 
 import requests
 import chardet
