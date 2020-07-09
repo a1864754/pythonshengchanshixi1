@@ -32,3 +32,4 @@ china_today_data.columns = ["today_" + i for i in china_today_data.columns]
 # 合并
 china_data = pd.concat([china_date, china_total_data, china_today_data], axis=1)
 get_save.save_data(china_data, "china_data")
+print(china_data)
